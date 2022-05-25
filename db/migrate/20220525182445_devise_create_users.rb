@@ -19,7 +19,6 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.1]
       t.string :last_name
       t.date :dob
       t.text :bio
-      t.boolean :admin
 
       ## Trackable
       # t.integer  :sign_in_count, default: 0, null: false
