@@ -7,6 +7,7 @@ class CreateTrips < ActiveRecord::Migration[6.1]
       t.date :start_date
       t.integer :duration
       t.string :activity_type
+      t.references :user, null: false, foreign_key: true
 
       t.timestamps
     end
