@@ -23,7 +23,7 @@ class TripsController < ApplicationController
   end
 
   def index
-    @trip = Trip.all.sort_by(&:start_date)
+    @trips = Trip.all.sort_by(&:start_date)
   end
 
   def destroy

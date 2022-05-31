@@ -1,9 +1,18 @@
 <h1>YOUR TRIPS</h1>
 
-<% if @trips.nil? %>
+<% trip_count = 1 %>
+
+<% if @trips.empty? %>
   <p>You haven't added any trips yet</p>
 <% else %>
   <% @trips.each do |trip| %>
-  <%= trip.country %>
+    <p>Trip <%= trip_count %></p>
+    <p>Country: <%= trip.country %></p>
+    <p>Region: <%= trip.region %></p>
+    <p>Budget: £<%= trip.budget %></p>
+    <p>Start Date: <%= trip.start_date %></p>
+    <p>End date: <%= trip.start_date + trip.duration %></p>
+    <% trip_count += 1 %>
+    <br>
   <% end %>
 <% end %>
