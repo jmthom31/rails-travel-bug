@@ -1,0 +1,15 @@
+<div class='container'>
+  <h3>Add a trip</h3>
+
+  <%= simple_form_for(@trip) do |f| %>
+    <%= f.input :country, label: 'Country', as: :string%>
+    <%= f.input :region, label: 'Region', as: :string%>
+    <%= f.input :budget, label: 'Budget (£)', as: :integer%>
+    <%= f.input :start_date, as: :date %>
+    <%= f.input :duration, label: 'Duration (days)', as: :integer%>
+    <%= f.input :activity_type, as: :string %>
+    <%= f.submit :Add, class:'btn btn-primary' %>
+  <% end %>
+
+
+</div>
