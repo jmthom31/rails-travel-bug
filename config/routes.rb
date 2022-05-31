@@ -5,4 +5,6 @@ Rails.application.routes.draw do
 
     get 'faqs', to: 'pages#faqs'
     get 'account', to: 'users#account'
+
+    resources :trips, only: %i[new create update index destroy]
 end

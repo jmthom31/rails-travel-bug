@@ -1,0 +1,9 @@
+<h1>YOUR TRIPS</h1>
+
+<% if @trips.nil? %>
+  <p>You haven't added any trips yet</p>
+<% else %>
+  <% @trips.each do |trip| %>
+  <%= trip.country %>
+  <% end %>
+<% end %>
